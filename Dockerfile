@@ -30,3 +30,4 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/source
 USER admin
 WORKDIR /home/admin
 
+CMD ["/build.sh"]
