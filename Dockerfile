@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list \
 	&& apt-get -y update \
-	&& apt-get install -qqy --no-install-recommends asciidoc autoconf automake autopoint binutils bison build-essential bzip2 ca-certificates cmake cpio curl device-tree-compiler flex gawk gcc-multilib gettext git git-core gperf help2man htop lib32gcc1 libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev libmpc-dev libmpfr-dev libncurses5-dev libssl-dev libtool libtool-bin libz-dev msmtp nano p7zip p7zip-full patch pkg-config python-docutils qemu-utils rsync screen subversion sudo texinfo uglifyjs unzip upx vim wget xmlto xxd zlib1g-dev zsh \
+	&& apt-get install -qqy --no-install-recommends asciidoc autoconf automake autopoint binutils bison build-essential bzip2 ca-certificates curl device-tree-compiler flex gawk gcc-multilib gettext git git-core gperf htop lib32gcc1 libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libssl-dev libtool libz-dev mc msmtp nano p7zip p7zip-full patch pkg-config python-docutils qemu-utils rsync screen subversion sudo texinfo uglifyjs unzip upx vim wget xmlto zlib1g-dev zsh \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& useradd -m admin \
